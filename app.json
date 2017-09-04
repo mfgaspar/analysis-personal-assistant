@@ -1,0 +1,17 @@
+{
+  "name": "Analysis Personal Assistant",
+  "description": "Analysis Personal Assistant",
+  "repository": "none",
+  "keywords": ["ai", "api.ai", "bot", "w3c"],
+  "env": {
+    "APIAI_TOKEN": {
+      "description": "6c2c69937f094a7db39bb07f9a004d56",
+      "value": ""
+    },
+    "APIAI_SESSION_ID": {
+      "description": "analysis_assistant_YYETDGGDNC",
+      "value": ""
+    }
+  },
+  "image": "heroku/nodejs"
+}

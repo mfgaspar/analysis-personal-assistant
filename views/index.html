@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Analysis Assistant</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script type="text/javascript">
+      document.domain = "smart.mfgaspar.org";
+      window.onAnalyzerLoad = function(api, frameId) {
+          window.analyzeApi = api;
+          window.analyzerFrame = window.analyzerFrame || [];
+          window.analyzerFrame.push(frameId);
+          console.log(window.analyzeApi);
+      };
+      console.log(document.domain);
+    </script>
+
+  </head>
+
+  <body>
+    <section>
+      <h1>Simple AI Bot</h1>
+      <h2>with Web Speech API</h2>
+      <button><i class="fa fa-microphone"></i></button>
+
+      <div>
+          <p>You said: <em class="output-you">...</em></p>
+          <p>Bot replied: <em class="output-bot">...</em></p>
+      </div>
+    </section>
+
+   
+      <iframe id="analyzer-iframe" src="http://smart.mfgaspar.org:8080/pentaho/api/repos/xanalyzer/editor?catalog=SteelWheels&cube=SteelWheelsSales&embeddingContext=biome,heart-rate&removeUndoButton=true&removeRedoButton=true&showFieldLayout=false&showFieldList=false&showFilterPanel=false&userid=admin&password=password"></iframe>
+    
+
+    <script src="https://smart.mfgaspar.org:8443/socket.io/socket.io.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
